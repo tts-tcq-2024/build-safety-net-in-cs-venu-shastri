@@ -30,7 +30,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Run tests and collect coverage
-      run: dotnet test --collect:"XPlat Code Coverage"
+      run: dotnet test --collect:"XPlat Code Coverage
 
     - name: Install coverage report generator
       run: dotnet tool install -g dotnet-reportgenerator-globaltool
