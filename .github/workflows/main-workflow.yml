@@ -12,7 +12,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v4
@@ -36,7 +36,7 @@ jobs:
       run: dotnet tool install -g dotnet-reportgenerator-globaltool
 
     - name: Make coverage report
-      run: reportgenerator -reports:"code-test-cover-cs/TestResults/*/*.xml" -targetdir:"coverage" -reporttypes:"Html"
+      run: reportgenerator -reports:"code-test-cover-cs\TestResults\*\*.xml" -targetdir:"coverage" -reporttypes:"Html"
     
     - name: Create coverage artifact
       uses: actions/upload-artifact@v2
